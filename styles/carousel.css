@@ -1,0 +1,94 @@
+
+.carousel
+{
+	position:relative;
+	box-sizing:border-box;
+	max-width: 870px;
+	margin: auto;
+}
+.carousel__viewport{
+	position:relative;
+	overflow:hidden;
+	padding: 20px 0px;
+	max-width:100%;
+	max-height:100%;
+}
+.carousel__slide{
+	flex:0 0 auto;
+	width:270px;
+	height: 350px;
+	padding:1rem;
+	position:relative;
+	overflow: hidden;
+	overscroll-behavior:contain;
+	-webkit-overflow-scrolling:touch;
+	margin-left: 20px;
+	
+}
+
+.has-dots{
+	margin-bottom:calc(0.5rem + 22px)
+}
+.carousel__dots{
+	margin:0 auto;
+	padding:0;
+	position:absolute;
+	top:calc(100% + 0.5rem);
+	left:0;right:0;display:flex;
+	justify-content:center;
+	list-style:none;
+	user-select:none
+}
+
+.carousel__dots .carousel__dot
+{
+	margin:0;
+	padding:0;
+	display:block;
+	position:relative;
+	width:42px;
+	height:22px;
+	cursor:pointer;
+}
+.carousel__dots .carousel__dot:after
+{
+	content:"";
+	width:18px;
+	height:18px;
+	border-radius:50%;
+	position:absolute;
+	top:50%;left:50%;
+	transform:translate(-50%, -50%);
+	background-color:currentColor;
+	opacity:.25;
+	transition:opacity .15s ease-in-out
+}
+.carousel__dots .carousel__dot.is-selected:after
+{
+	opacity:1
+}
+.carousel__button{
+	padding:0;border:0;display:flex;
+	justify-content:center;align-items:center;
+	pointer-events:all;
+	cursor:pointer;
+	transition:opacity .15s ease;
+	background-color: #EDEAEA;
+}
+.carousel__button.is-prev,.carousel__button.is-next
+{
+	position:absolute;top:50%;transform:translateY(-50%)
+}
+.carousel__button.is-prev{left:10px}
+.carousel__button.is-next{right:10px}
+.carousel__button[disabled]
+{
+	cursor:default;opacity:.3
+}
+.carousel__button svg
+{
+	fill:none;stroke:currentColor;
+	stroke-linejoin:bevel;
+	stroke-linecap:round;
+	pointer-events:none
+}

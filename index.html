@@ -493,141 +493,19 @@
 	</div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script>
-		$("#cont-menu").click(function () {
-			$("#iconom").toggleClass("rotacion");
-        $("#menu").slideToggle();
-      });
-	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="scripts/responsiveslides.min.js"></script>
-	
-		    <script>
-      $(function () {
-        $("#slider4").responsiveSlides({
-          auto: false,
-          pager: false,
-          nav: true,
-          speed: 500,
-          namespace: "callbacks",
-        });
-      });
-    </script>
-	<!--<script>
-	  $(function() {
-		$(".rslides").responsiveSlides({  
-		  timeout: 4000         
-		});
-	  });
-		
-	</script>-->
 	<script src="scripts/wow.min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-	
-	    <script>
-      //tabs
-      $("#btn1").addClass("activo");
-      $("#cont-tabs article").hide();
-      $("#m1").show();
-
-      $(".link").click(function () {
-        $(".link").removeClass("activo");
-        $(this).addClass("activo");
-        $("#cont-tabs article").hide();
-
-        var activar_tab = $(this).attr("href");
-        $(activar_tab).show();
-      });
-    </script>
-		<script>
-		var modal= document.getElementById("modal");
-		var modalvideo= document.getElementById("modal-video");
-		var play=document.getElementById("btn-play");
-		var cerrar= document.getElementById("btncerrar");
-		//var btn2=document.getElementById("btn2");
-		
-		play.onclick = function(){
-        modalvideo.style.display = "block";
-      }
-		/*btn2.onclick = function(){
-        modal.style.display = "flex";
-      }*/
-		cerrar.onclick = function(){
-        modal.style.display = "none";
-      }
-		
-		window.onclick = function (event) {
-        if (event.target == modalvideo) {
-         modalvideo.style.display = "none";
-        }
-		if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-			
-	
-		
-			$(".llamar-modal").click(function(){
-				modal.style.display = "flex";
-			})
-	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 	<script src="scripts/carousel.umd.js"></script>
 	<script>
 		//Carrousel
-
 		const mainCarousel = new Carousel(document.querySelector("#carrusel"), {
 		});
 	</script>
-	
-	<script>
-		//contador reversa
-		var h=11;
-		var min=59;
-		var seg=59;
-		window.onload= hora;
-		function hora()
-		{
-			
-			if(seg==0)
-				{
-					min--;
-					seg=59;
-					document.getElementById("min").innerHTML=min;
-				}
-			else
-			{
-				document.getElementById("min").innerHTML=min;
-			}
-			
-			document.getElementById("hr").innerHTML=h;
-			
-			if(seg<10)
-				{
-					document.getElementById("seg").innerHTML="0"+seg;
-				}
-			else
-				{
-					document.getElementById("seg").innerHTML=seg;
-				}
-			seg--;
-			
-		}
-		var repet = setInterval(hora,1000);
-		
-	</script>
-	<script>
-        var subir = $("#inicio");
-
-        subir.click(function (e) {
-            e.preventDefault();
-
-            $("html, body").animate({
-                scrollTop: 0
-            }, 500)
-        });
-    </script>
+	<script src="/scripts/elements.js"></script>
 </body>
 </html>

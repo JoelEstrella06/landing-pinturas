@@ -109,7 +109,10 @@ header .flex-horizontal h3 a:hover
 {
 	flex-wrap: wrap;
 }
-.barra-navegacion ul
+.barra-navegacion .flex-horizontal{
+	position: relative;
+}
+.barra-navegacion div ul
 {
 	
 	list-style: none;
@@ -118,12 +121,12 @@ header .flex-horizontal h3 a:hover
 	gap:15px;
 	align-items: stretch;
 }
-.barra-navegacion ul li
+.barra-navegacion div ul li
 {
 	flex-grow: 1;
 	text-align: center;
 }
-.barra-navegacion ul li a
+.barra-navegacion div ul li a
 {
 	font-size: 15px;
 	font-weight: 500;

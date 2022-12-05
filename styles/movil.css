@@ -67,14 +67,28 @@
 	{
 		display: none;
 	}
-	.barra-navegacion ul
-	{
-		display: none;
+	header .flex-horizontal{
+		padding: 15px 0;
 	}
-	.barra-navegacion ul li
+	.barra-navegacion div{
+		width: 100%;
+		
+	}
+	/*.barra-navegacion ul*/
+	#menu
 	{
-
-		padding: 10px;
+		/*display: none;*/
+		position: absolute;
+		
+		background-color: white;
+		width:100%;
+		top: 100%;
+		z-index: 9;
+	}
+	/*.barra-navegacion ul li*/
+	#menu li
+	{
+		padding:10px;
 	}
 	.fondo-amarillo
 	{
@@ -87,8 +101,8 @@
 	}
 	.hvr-underline-from-center:before{
 		
-	  left: 0;
-	  right: 0;
+	  left: 20%;
+	  right: 20%;
 	}
 	.cont-text-izq ul
 	{
